@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/rp_marketplace
+    username: rp_user
+    password: rp_password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  mail:
+    host: smtp.exemplo.com
+    port: 587
+    username: suporte@exemplo.com
+    password: change-me
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+app:
+  jwt:
+    secret: change-me-change-me-change-me-change-me
+    expiration-seconds: 3600
+  reset:
+    base-url: https://rp-marketplace.com/reset-password
